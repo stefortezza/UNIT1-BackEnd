@@ -5,7 +5,7 @@ public class Esercizio3 {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Inserisci una stringa (digita ':q' per uscire):");
+            System.out.println("Inserisci una stringa (digita ':q & :Q' per uscire):");
             String input = scanner.nextLine();
 
             if (input.equals(":q")) {
