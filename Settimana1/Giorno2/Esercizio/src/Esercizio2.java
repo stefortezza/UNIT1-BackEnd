@@ -20,7 +20,7 @@ public class Esercizio2 {
                 System.out.println("TRE");
                 break;
             default:
-                System.out.println("ERRORE: VALORE ERRATO!");
+                System.out.println("STUPIDO TI HO DETTO UN NUMERO TRA 0 E 3!!!");
         }
     }
 }
