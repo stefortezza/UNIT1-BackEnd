@@ -1,0 +1,3 @@
+public enum tipoLavoro {
+    STUDENTE, DOTTORE, PENSIONATO, INGEGNIERE, PROGRAMMATORE;
+}
