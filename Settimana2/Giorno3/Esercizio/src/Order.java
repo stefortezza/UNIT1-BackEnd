@@ -77,11 +77,10 @@ public class Order {
 
     public static void filterByDate(List<Order> orders) {
         orders.stream()
-                .filter(order -> order.getOrderDate().isAfter(LocalDate.of(2024, 4, 24)) && order.getOrderDate().isBefore(LocalDate.of(2024, 4, 24)))
+                .filter(order -> order.getOrderDate().isAfter(LocalDate.of(2024, 1, 31)) && order.getDeliveryDate().isBefore(LocalDate.of(2024, 4, 2)))
                 .filter(order -> order.getCustomer().getTier() == 2)
-                .forEach(order -> {
-                    System.out.println("Order ID: " + order.getId() + ", Order Date: " + order.getOrderDate() + ", Customer Tier: " + order.getCustomer().getTier());
-                });
+                .flatMap(order -> order.getProducts().stream())
+                .forEach(product -> System.out.println(product));
     }
 
 

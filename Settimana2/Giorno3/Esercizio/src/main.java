@@ -40,10 +40,10 @@ public class main {
         prodottiOrdine4.add(prodotto1a);
 
 
-        Order ordine1 = new Order(1, "Disponibile", LocalDate.now(), LocalDate.of(2024, 02, 01), prodottiOrdine1, cliente1);
-        Order ordine2 = new Order(1, "Disponibile", LocalDate.now(), LocalDate.of(2024, 02, 01), prodottiOrdine2, cliente2);
-        Order ordine3 = new Order(3, "Disponibile", LocalDate.now(), LocalDate.of(2024, 03, 01), prodottiOrdine3, cliente3);
-        Order ordine4 = new Order(4, "Disponibile", LocalDate.now(), LocalDate.of(2024, 05, 01), prodottiOrdine4, cliente3);
+        Order ordine1 = new Order(1, "Disponibile", LocalDate.of(2024, 2, 10), LocalDate.of(2024, 02, 01), prodottiOrdine1, cliente1);
+        Order ordine2 = new Order(1, "Disponibile", LocalDate.of(2024, 3, 10), LocalDate.of(2024, 02, 01), prodottiOrdine2, cliente2);
+        Order ordine3 = new Order(3, "Disponibile", LocalDate.of(2024, 4, 10), LocalDate.of(2024, 03, 01), prodottiOrdine3, cliente3);
+        Order ordine4 = new Order(4, "Disponibile", LocalDate.of(2024, 1, 10), LocalDate.of(2024, 05, 01), prodottiOrdine4, cliente3);
 
         ordini.add(ordine1);
         ordini.add(ordine2);
@@ -56,11 +56,13 @@ public class main {
 
 
         System.out.println("ESERCIZIO 1: ");
-        Product.filterByCategoryBoys(prodotti).forEach(product -> {});
+        Product.filterByCategoryBoys(prodotti).forEach(product -> {
+        });
         System.out.println("ESERCIZIO 2: ");
         Order.filterByCategoryBaby(prodotti);
         System.out.println("ESERCIZIO 3: ");
-        Product.filterByCategoryBoys(prodotti).forEach(product -> {});
+        Product.filterByCategoryBoys(prodotti).forEach(product -> {
+        });
         System.out.println("ESERCIZIO 4: ");
         Order.filterByDate(ordini);
     }
