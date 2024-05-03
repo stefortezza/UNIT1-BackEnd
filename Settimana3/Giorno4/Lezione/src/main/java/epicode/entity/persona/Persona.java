@@ -17,7 +17,6 @@ public class Persona {
     private String Nome;
     private String Cognome;
     private String Email;
-    @Column(name = "data_di_nascita")
     private LocalDate dataDiNascita;
     @Enumerated(EnumType.STRING)
     @Column(name = "sesso")
