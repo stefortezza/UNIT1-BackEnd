@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4345e8c3-9881-4f1f-b495-334f13bc53e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/dao/GestioneEventiDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/dao/LocationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/dao/PartecipazioneDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/dao/PersonaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/entity/gestioneEventi/GestioneEventi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/entity/gestioneEventi/TipoEvento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/entity/location/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/entity/partecipazione/Partecipazione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/entity/partecipazione/Stato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/entity/persona/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/java/epicode/entity/persona/Sesso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/Esercizio/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/dao/GestioneEventiDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/dao/LocationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/dao/PartecipazioneDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/dao/PersonaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/entity/gestioneEventi/GestioneEventi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/entity/gestioneEventi/TipoEvento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/entity/location/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/entity/partecipazione/Partecipazione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/entity/partecipazione/Stato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/entity/persona/Persona.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/java/epicode/entity/persona/Sesso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lezione/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "stefortezza"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/stefortezza/UNIT1-BackEnd.git",
+    "accountId": "f260610a-3c5a-401c-b2aa-cbb6bf190414"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2fx4WCoSaADNQSBZFcFOAieruO7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/UNIT1-BackEnd/Settimana3/Giorno4/Lezione",
+    "onboarding.tips.debug.path": "E:/UNIT1-BackEnd/Settimana3/Giorno4/Esercizio/src/main/java/org/example/Main.java"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4345e8c3-9881-4f1f-b495-334f13bc53e7" name="Changes" comment="" />
+      <created>1714729424330</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714729424330</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
