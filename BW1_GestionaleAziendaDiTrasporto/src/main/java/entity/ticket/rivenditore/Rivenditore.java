@@ -1,6 +1,10 @@
 package entity.ticket.rivenditore;
 
+import entity.ticket.Ticket;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
@@ -13,9 +17,17 @@ public abstract class Rivenditore {
     private Integer bigliettiVenduti;
     @Column(name="biglietti_disponibili")
     private Integer bigliettiDisponibili;
+    @ManyToMany(mappedBy = "rivenditori")
+    private List<Ticket> tickets;
 
     public Rivenditore() {
+        this.bigliettiDisponibili = 0;
+        this.bigliettiVenduti = 0;
+        this.tickets = new ArrayList<>();
+    }
 
+    public List<Ticket> getTickets() {
+        return tickets;
     }
 
     public Integer getId() {
