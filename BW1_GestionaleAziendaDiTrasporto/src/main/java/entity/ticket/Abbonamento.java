@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name="abbonamenti")
 public class Abbonamento extends Ticket {
-    @Enumerated(value = EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     @Column(name="tipo_abbonamento")
     private TipoAbbonamento tipoAbbonamento;
     @Column(name="data_scadenza")
@@ -69,5 +69,15 @@ public class Abbonamento extends Ticket {
 
     public void setTessera(Tessera tessera) {
         this.tessera = tessera;
+    }
+
+    @Override
+    public String toString() {
+        return "Abbonamento{" +
+                "tipoAbbonamento=" + tipoAbbonamento +
+                ", dataScadenza=" + dataScadenza +
+                ", tessera=" + tessera +
+                ", dataEmissione=" + dataEmissione +
+                '}';
     }
 }

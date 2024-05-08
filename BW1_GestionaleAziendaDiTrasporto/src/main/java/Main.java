@@ -15,6 +15,8 @@ public class Main {
         TicketDAO ticketDAO = new TicketDAO(em);
         StatoDAO statoDAO = new StatoDAO(em);
         MezzoDAO mezzoDAO = new MezzoDAO(em);
+        TrattaDAO trattaDAO = new TrattaDAO(em);
+        ViaggioDAO viaggioDAO = new ViaggioDAO(em);
 //
 //        Utente u1 = new Utente();
 //        u1.setNome("Stefano");
@@ -163,5 +165,14 @@ public class Main {
 //            System.err.println(e.getMessage());
 //        }
 //        ticketDAO.update(findb1);
+
+        // Creazione Tratta
+//        Tratta tr1 = new Tratta("Roma Tiburtina", "Napoli Centrale", Duration.ofHours(2).plusMinutes(10));
+//        trattaDAO.save(tr1);
+//        Tratta findtr1 = trattaDAO.getById(46);
+//        Mezzo findm1 = mezzoDAO.getById(37);
+//        Viaggio v1 = new Viaggio(LocalDateTime.now(), findtr1, findm1);
+//        v1.setOrarioArrivo(LocalDateTime.now().plusHours(4));
+//        viaggioDAO.save(v1);
     }
 }

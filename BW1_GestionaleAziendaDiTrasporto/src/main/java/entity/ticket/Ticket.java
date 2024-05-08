@@ -25,8 +25,9 @@ public abstract class Ticket {
     )
     private List<Rivenditore> rivenditori;
 
-    public Ticket(Double prezzo) {
+    public Ticket(Double prezzo, LocalDate dataEmissione) {
         this.prezzo = prezzo;
+        this.dataEmissione = dataEmissione;
         this.rivenditori = new ArrayList<>();
     }
 

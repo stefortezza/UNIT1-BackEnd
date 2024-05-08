@@ -1,6 +1,7 @@
 package dao;
 
 import entity.mezzo.Mezzo;
+import entity.tratta.Tratta;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -40,5 +41,11 @@ public class MezzoDAO {
         et.begin();
         em.remove(mezzo);
         et.commit();
+    }
+
+    public Integer contaTratte(Mezzo mezzo, Tratta tratta) {
+        return mezzo.getViaggi().stream()
+                .filter(viaggio -> viaggio.getTratta().getId().equals(tratta.getId()))
+                .toList().size();
     }
 }
