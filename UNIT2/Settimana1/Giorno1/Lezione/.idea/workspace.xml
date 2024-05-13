@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b3e20ce8-98fc-4a3e-ac17-4f77184291f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/ProgettoSpringApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/appConfig/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Aula.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Computer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Dispositivo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Smartphone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Studente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/test/java/it/epicode/progettoSpring/ProgettoSpringApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2gQHBmFARzSMxLSy8RllX2CXJET" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/UNIT1-BackEnd/BW"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b3e20ce8-98fc-4a3e-ac17-4f77184291f8" name="Changes" comment="" />
+      <created>1715622748306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715622748306</updated>
+    </task>
+    <servers />
+  </component>
+</project>
