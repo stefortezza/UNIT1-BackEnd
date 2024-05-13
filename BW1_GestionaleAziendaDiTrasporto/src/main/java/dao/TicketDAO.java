@@ -1,12 +1,14 @@
 package dao;
 
 import entity.ticket.Abbonamento;
+import entity.ticket.Biglietto;
 import entity.ticket.Ticket;
 import entity.utente.Utente;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class TicketDAO {
@@ -58,6 +60,31 @@ public class TicketDAO {
                 .size();
     }
 
+    public Integer findTicketVidimatiFromPeriod(LocalDate fromDate, LocalDate toDate) {
+        return em.createQuery("SELECT t FROM Ticket t", Ticket.class)
+                .getResultStream()
+                .filter(ticket ->
+                        ticket.getDataEmissione()
+                        .isAfter(fromDate)
+                        &&
+                        ticket.getDataEmissione()
+                                .isBefore(toDate)
+                        ||
+                        ticket.getDataEmissione()
+                                .isEqual(toDate)
+                        ||
+                        ticket.getDataEmissione()
+                                .isEqual(fromDate))
+                .filter(ticket -> {
+                    if (ticket instanceof Biglietto) {
+                        return ((Biglietto) ticket).getVidimazione() != null;
+                    } else {
+                        return false;
+                    }
+                })
+                .toList().size();
+    }
+
     public void delete(Ticket ticket) {
         EntityTransaction et = em.getTransaction();
         et.begin();
@@ -70,6 +97,15 @@ public class TicketDAO {
                 .getTessera()
                 .getUtente()
                 .getId()
-                .equals(utente.getId());
+                .equals(utente.getId()) &&
+                (
+                        ((Abbonamento) ticket)
+                            .getDataScadenza()
+                            .isAfter(LocalDate.now())
+                        ||
+                        ((Abbonamento) ticket)
+                                .getDataScadenza()
+                                .isEqual(LocalDate.now())
+                );
     }
 }

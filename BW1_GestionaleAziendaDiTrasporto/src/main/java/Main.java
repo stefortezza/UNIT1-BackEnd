@@ -1,8 +1,27 @@
 import dao.*;
+import entity.mezzo.Mezzo;
+import entity.mezzo.StatoMezzo;
+import entity.ticket.Abbonamento;
+import entity.ticket.Biglietto;
+import entity.ticket.rivenditore.Rivenditore;
+import entity.ticket.rivenditore.RivenditoreAutorizzato;
+import entity.tratta.Tratta;
+import entity.tratta.Viaggio;
+import entity.utente.Tessera;
+import enums.Autorizzazione;
+import enums.TipoAbbonamento;
+import enums.TipoMezzo;
+import enums.TipoStatoMezzo;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -125,18 +144,18 @@ public class Main {
 //        ticketDAO.save(b1);
 
         // Conteggio biglietti per periodo
-//        Integer bigliettiDatati = ticketDAO.findTicketFromPeriod(LocalDate.of(2023, 12, 25), LocalDate.now());
-//        System.out.println(bigliettiDatati);
+        Integer bigliettiDatati = ticketDAO.findTicketFromPeriod(LocalDate.of(2023, 12, 25), LocalDate.now());
+        System.out.println("Biglietti creati in un periodo di tempo: "+bigliettiDatati);
 
         // Conteggio biglietti per Rivenditore
-//        HashMap<String, Integer> numTicketFromRivenditore = rivenditoreDAO.findNumTicketFromRivenditore();
-//        System.out.println(numTicketFromRivenditore);
+        HashMap<String, Integer> numTicketFromRivenditore = rivenditoreDAO.findNumTicketFromRivenditore();
+        System.out.println(numTicketFromRivenditore);
 
         // Validità abbonamento in base a biglietto, tessera e utente
-//        Boolean isValid1 = ticketDAO.isValid(ticketDAO.getById(22), utenteDAO.getById(3));
-//        System.out.println("L'abbonamento con id 22 è di Stefano? "+isValid1);
-//        Boolean isValid2 = ticketDAO.isValid(ticketDAO.getById(22), utenteDAO.getById(4));
-//        System.out.println("L'abbonamento con id 22 è di Leonardo? "+isValid2);
+        Boolean isValid1 = ticketDAO.isValid(ticketDAO.getById(22), utenteDAO.getById(3));
+        System.out.println("L'abbonamento con id 22 è di Stefano e non è scaduto? "+isValid1);
+        Boolean isValid2 = ticketDAO.isValid(ticketDAO.getById(22), utenteDAO.getById(4));
+        System.out.println("L'abbonamento con id 22 è di Leonardo e non è scaduto? "+isValid2);
 
         // Creazione mezzo
 //        Mezzo m1 = new Mezzo();
@@ -166,13 +185,34 @@ public class Main {
 //        }
 //        ticketDAO.update(findb1);
 
+        // Biglietti vidimati da un mezzo
+        Mezzo findm2 = mezzoDAO.getById(40);
+        System.out.println("Biglietti vidimati su mezzo 40: "+findm2.getBigliettiVidimati().size());
+
+        // Biglietti vidimati in un periodo di tempo
+        System.out.println("Biglietti vidimati in un periodo: "+ticketDAO.findTicketVidimatiFromPeriod(LocalDate.of(2023, 12, 25), LocalDate.now()));
+
         // Creazione Tratta
 //        Tratta tr1 = new Tratta("Roma Tiburtina", "Napoli Centrale", Duration.ofHours(2).plusMinutes(10));
 //        trattaDAO.save(tr1);
-//        Tratta findtr1 = trattaDAO.getById(46);
-//        Mezzo findm1 = mezzoDAO.getById(37);
+        Tratta findtr1 = trattaDAO.getById(46);
+        Mezzo findm1 = mezzoDAO.getById(37);
 //        Viaggio v1 = new Viaggio(LocalDateTime.now(), findtr1, findm1);
 //        v1.setOrarioArrivo(LocalDateTime.now().plusHours(4));
 //        viaggioDAO.save(v1);
+
+        // Conta Numero di volte che un mezzo percorre una tratta
+        System.out.println("Il mezzo 37 ha percorso la tratta 46 : "+mezzoDAO.contaTratte(findm1, findtr1)+" volte");
+
+        // Verifica del tempo di percorrenza effettivo di un viaggio
+        System.out.println("Il mezzo 37 ha effettuato un viaggio della tratta 46 in "+ durataInStringa(viaggioDAO.getById(48).getPercorrenzaEffettiva()));
+    }
+
+    public static String durataInStringa(Duration durata) {
+        long secondi = durata.getSeconds();
+        long ore = secondi / 3600;
+        long minuti = (secondi % 3600) / 60;
+        secondi = secondi % 60;
+        return "H"+ore+" M"+minuti+" S"+secondi;
     }
 }
