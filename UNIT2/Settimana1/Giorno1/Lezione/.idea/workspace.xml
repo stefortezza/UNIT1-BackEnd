@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3e20ce8-98fc-4a3e-ac17-4f77184291f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/ProgettoSpringApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/appConfig/AppConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Aula.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Computer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Dispositivo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Smartphone.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/java/it/epicode/progettoSpring/bean/Studente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../progettoSpring/src/test/java/it/epicode/progettoSpring/ProgettoSpringApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Giorno2/Lezione/src/main/java/it/epicode/Lezione/appConfig/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Giorno2/Lezione/src/main/java/it/epicode/Lezione/bean/Aula.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Giorno2/Lezione/src/main/java/it/epicode/Lezione/bean/Computer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Giorno2/Lezione/src/main/java/it/epicode/Lezione/bean/Dispositivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Giorno2/Lezione/src/main/java/it/epicode/Lezione/bean/Smartphone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Giorno2/Lezione/src/main/java/it/epicode/Lezione/bean/Studente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +17,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "stefortezza"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/stefortezza/UNIT1-BackEnd.git",
+    "accountId": "f260610a-3c5a-401c-b2aa-cbb6bf190414"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2gQHBmFARzSMxLSy8RllX2CXJET" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -40,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/UNIT1-BackEnd/BW"
+    "last_opened_file_path": "E:/UNIT1-BackEnd/UNIT2/Settimana1/Giorno1/Lezione"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
