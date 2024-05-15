@@ -12,11 +12,7 @@ public class EsercizioOrdineRistoranteApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EsercizioOrdineRistoranteApplication.class, args);
-		ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
 
-		Menu menu = ctx.getBean(Menu.class);
-
-		menu.stampaMenu();
 	}
 
 }

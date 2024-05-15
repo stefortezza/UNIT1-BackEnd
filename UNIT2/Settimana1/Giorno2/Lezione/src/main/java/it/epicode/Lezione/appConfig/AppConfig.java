@@ -22,7 +22,7 @@ public class AppConfig {
     //@Bean("Stefano")
     //SE NON GLI PASSO IL NOME, POSSO METTERE @Primary PER FAR CAPIRE A SPRING
     //CHE DEVE DARMI QUEL TIPO ANNOTATO CON PRIMARY
-    @Bean
+    @Bean ("Carla")
     @Primary
     //@Scope("prototype")
     public Studente getStudente(@Value("${studente1.nome}") String nome, @Value("${studente1.cognome}") String cognome) {
