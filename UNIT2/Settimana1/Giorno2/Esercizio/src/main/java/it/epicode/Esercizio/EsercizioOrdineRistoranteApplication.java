@@ -10,9 +10,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 @SpringBootApplication
 public class EsercizioOrdineRistoranteApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(EsercizioOrdineRistoranteApplication.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(EsercizioOrdineRistoranteApplication.class, args);
 
-	}
+    }
 
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 @Data
 public class Tavolo {
     private int numeroTavolo;
-    private int numeroCopertiMassimo;
+    private int numeroCopertiMassimi;
     private Stato stato;
+    private double coperto;
 }

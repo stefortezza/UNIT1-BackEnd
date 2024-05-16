@@ -1,18 +1,20 @@
 package it.epicode.Esercizio.appConfig;
 
-import it.epicode.Esercizio.bean.Bevanda;
-import it.epicode.Esercizio.bean.Ingrediente;
-import it.epicode.Esercizio.bean.Menu;
-import it.epicode.Esercizio.bean.Pizza;
+import it.epicode.Esercizio.bean.*;
+import it.epicode.Esercizio.enums.Stato;
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import java.util.ArrayList;
 
 @Configuration
+@PropertySource("application.properties")
 public class AppConfig {
     @Bean
-    public Bevanda birra(){
+    public Bevanda birra() {
         Bevanda birra = new Bevanda();
         birra.setNome("birra");
         birra.setMl(33);
@@ -23,7 +25,7 @@ public class AppConfig {
     }
 
     @Bean
-    public Bevanda acqua(){
+    public Bevanda acqua() {
         Bevanda acqua = new Bevanda();
         acqua.setNome("acqua");
         acqua.setMl(50);
@@ -34,7 +36,7 @@ public class AppConfig {
     }
 
     @Bean
-    public Bevanda cocaCola(){
+    public Bevanda cocaCola() {
         Bevanda cocaCola = new Bevanda();
         cocaCola.setNome("cocaCola");
         cocaCola.setMl(33);
@@ -45,7 +47,7 @@ public class AppConfig {
     }
 
     @Bean
-    public Ingrediente mozzarella(){
+    public Ingrediente mozzarella() {
         Ingrediente mozzarella = new Ingrediente();
         mozzarella.setNome("mozzarella");
         mozzarella.setCalorie(100);
@@ -54,7 +56,7 @@ public class AppConfig {
     }
 
     @Bean
-    public Ingrediente pomodoro(){
+    public Ingrediente pomodoro() {
         Ingrediente pomodoro = new Ingrediente();
         pomodoro.setNome("pomodoro");
         pomodoro.setCalorie(100);
@@ -63,7 +65,7 @@ public class AppConfig {
     }
 
     @Bean
-    public Ingrediente salame(){
+    public Ingrediente salame() {
         Ingrediente salame = new Ingrediente();
         salame.setNome("salame");
         salame.setCalorie(100);
@@ -73,7 +75,7 @@ public class AppConfig {
 
     //@Bean
     //@Scope("prototype")
-    public Pizza base(){
+    public Pizza base() {
         Pizza base = new Pizza();
         ArrayList<Ingrediente> ingredienti = new ArrayList<>();
         ingredienti.add(mozzarella());
@@ -82,7 +84,7 @@ public class AppConfig {
     }
 
     @Bean
-    public Pizza margherita(){
+    public Pizza margherita() {
         Pizza margherita = base();
         margherita.setNome("margherita");
         margherita.setCalorie(400);
@@ -92,7 +94,7 @@ public class AppConfig {
     }
 
     @Bean
-    public Pizza diavola(){
+    public Pizza diavola() {
         Pizza diavola = base();
         diavola.setNome("diavola");
         diavola.setCalorie(500);
@@ -101,8 +103,9 @@ public class AppConfig {
         diavola.getIngredienti().add(salame());
         return diavola;
     }
-    @Bean
-    public Menu menu(){
+
+    //@Bean
+    public Menu menu() {
         Menu menu = new Menu();
 
         ArrayList<Bevanda> bevande = new ArrayList<>();
@@ -124,5 +127,35 @@ public class AppConfig {
         menu.setPizze(pizze);
 
         return menu;
+    }
+
+    @Bean("tavolo1")
+    public Tavolo tavolo1(@Value("${tavolo1.coperto}") String coperto) {
+        Tavolo tavolo = new Tavolo();
+        tavolo.setNumeroTavolo(1);
+        tavolo.setNumeroCopertiMassimi(5);
+        tavolo.setStato(Stato.Libero);
+        tavolo.setCoperto(Double.parseDouble(coperto));
+        return tavolo;
+    }
+
+    @Bean("tavolo2")
+    public Tavolo tavolo2(@Value("${tavolo2.coperto}") String coperto) {
+        Tavolo tavolo = new Tavolo();
+        tavolo.setNumeroTavolo(2);
+        tavolo.setNumeroCopertiMassimi(7);
+        tavolo.setStato(Stato.Libero);
+        tavolo.setCoperto(Double.parseDouble(coperto));
+        return tavolo;
+    }
+
+    @Bean("tavolo3")
+    public Tavolo tavolo3(@Value("${tavolo3.coperto}") String coperto) {
+        Tavolo tavolo = new Tavolo();
+        tavolo.setNumeroTavolo(3);
+        tavolo.setNumeroCopertiMassimi(4);
+        tavolo.setStato(Stato.Libero);
+        tavolo.setCoperto(Double.parseDouble(coperto));
+        return tavolo;
     }
 }
