@@ -14,4 +14,3 @@ public interface DispositivoRepository extends JpaRepository<Dispositivo, Intege
     @Query(value = "select d from Dispositivo d order by d.nome desc", nativeQuery = true)
     public List<Dispositivo> findAllOrderByNomeDesc();
 }
-
