@@ -32,7 +32,8 @@ public class Runner implements CommandLineRunner {
 //        System.out.println(utenteService.getUtenteByPartialNome("%S%"));
 //        System.out.println(utenteService.getUtenteByPartialNome("%M%"));
 //        System.out.println(edificioService.getEdificioAll());
-//        System.out.println(postazioneAziendaleService.getPostazioneAziendaleAll());
-        System.out.println(postazioneAziendaleService.getPostazioneAziendaleByCodiceUnivoco(1));
+        System.out.println(postazioneAziendaleService.getPostazioneAziendaleAll());
+//        System.out.println(postazioneAziendaleService.getPostazioneAziendaleByCodiceUnivoco(1));
+        System.out.println(utenteService.getUtenteAll());
     }
 }

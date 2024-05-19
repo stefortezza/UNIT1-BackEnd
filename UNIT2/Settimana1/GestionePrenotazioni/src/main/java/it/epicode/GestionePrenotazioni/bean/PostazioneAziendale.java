@@ -8,6 +8,7 @@ import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
 @Data
@@ -30,19 +31,12 @@ public class PostazioneAziendale {
     @Enumerated(EnumType.STRING)
     private DisponibilitaPostazione disponibilitaPostazione;
 
-    public void effettuaPrenotazione(LocalDate giornoPrenotato, Utente utente) {
-        if (this.disponibilitaPostazione == DisponibilitaPostazione.LIBERO) {
-            this.setGiornoPrenotato(giornoPrenotato);
-            this.setUtente(utente);
-        } else {
-            throw new IllegalArgumentException("La postazione non è disponibile per il giorno specificato.");
-        }
-    }
 
     @Override
     public String toString() {
         return "PostazioneAziendale{" +
-                "codiceUnivoco=" + codiceUnivoco +
+                "utente=" + (utente != null ? utente.getNome() : "null") +
+                ", codiceUnivoco=" + codiceUnivoco +
                 ", descrizione='" + descrizione + '\'' +
                 ", tipoPostazione='" + tipoPostazione + '\'' +
                 ", numeroMassimoOccupanti=" + numeroMassimoOccupanti +

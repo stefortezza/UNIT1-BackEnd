@@ -6,6 +6,7 @@ import it.epicode.GestionePrenotazioni.repository.PostazioneAziendaleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -31,6 +32,10 @@ public class PostazioneAziendaleService {
 
     public List<PostazioneAziendale> getPostazioneAziendaleByCodiceUnivoco(int codiceUnivoco) {
         return postazioneAziendaleRepository.findByCodiceUnivoco(codiceUnivoco);
+    }
+
+    public List<PostazioneAziendale> getPostazioniByUtenteAndDate(Utente utente, LocalDate data) {
+        return postazioneAziendaleRepository.findByUtenteAndGiornoPrenotato(utente, data);
     }
 
 }

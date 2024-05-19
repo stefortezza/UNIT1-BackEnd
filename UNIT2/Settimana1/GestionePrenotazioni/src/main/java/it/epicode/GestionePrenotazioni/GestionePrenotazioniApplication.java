@@ -11,5 +11,4 @@ public class GestionePrenotazioniApplication {
         SpringApplication.run(GestionePrenotazioniApplication.class, args);
 
     }
-
 }
