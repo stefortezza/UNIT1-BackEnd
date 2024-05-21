@@ -9,7 +9,6 @@ import java.util.List;
 @Entity
 public class Edificio {
     @Id
-    @GeneratedValue
     private int id;
     private String nome;
     private String indirizzo;

@@ -15,12 +15,10 @@ public class Utente {
     private String username;
     private String nome;
     private String email;
-    @OneToMany(mappedBy = "utente", fetch = FetchType.EAGER)
-    private List<PostazioneAziendale> postazioniAziendali;
 
-    public void caricaPostazioniAziendali() {
-        this.postazioniAziendali.size();
-    }
+    @OneToMany(mappedBy = "utente", fetch = FetchType.EAGER)
+    private List<Prenotazione> prenotazioni;
+
 
     @Override
     public String toString() {
@@ -29,9 +27,6 @@ public class Utente {
                 .append(", username='").append(username).append('\'')
                 .append(", nome='").append(nome).append('\'')
                 .append(", email='").append(email).append('\'');
-        if (postazioniAziendali != null) {
-            sb.append(", postazioniAziendali=").append(postazioniAziendali.stream().map(PostazioneAziendale::getCodiceUnivoco).collect(Collectors.toList()));
-        }
         sb.append('}');
         return sb.toString();
     }

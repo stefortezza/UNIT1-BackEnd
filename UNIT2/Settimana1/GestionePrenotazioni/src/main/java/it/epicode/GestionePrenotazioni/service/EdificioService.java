@@ -1,9 +1,7 @@
 package it.epicode.GestionePrenotazioni.service;
 
 import it.epicode.GestionePrenotazioni.bean.Edificio;
-import it.epicode.GestionePrenotazioni.bean.PostazioneAziendale;
 import it.epicode.GestionePrenotazioni.repository.EdificioRepository;
-import it.epicode.GestionePrenotazioni.repository.PostazioneAziendaleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

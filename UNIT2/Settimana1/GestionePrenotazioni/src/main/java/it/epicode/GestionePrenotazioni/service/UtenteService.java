@@ -29,11 +29,4 @@ public class UtenteService {
         utenteRepository.deleteById(id);
     }
 
-    public List<Utente> getUtenteByNome(String nome) {
-        return utenteRepository.findByNome(nome);
-    }
-
-    public List<Utente> getUtenteByPartialNome(String nome) {
-        return utenteRepository.findByNomeLike(nome);
-    }
 }
