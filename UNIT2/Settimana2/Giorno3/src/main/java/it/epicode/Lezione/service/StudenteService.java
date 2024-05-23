@@ -1,6 +1,5 @@
 package it.epicode.Lezione.service;
 
-import com.cloudinary.Cloudinary;
 import it.epicode.Lezione.DTO.StudenteDto;
 import it.epicode.Lezione.exception.AulaNonTrovataException;
 import it.epicode.Lezione.exception.StudenteNonTrovatoException;
@@ -13,14 +12,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Optional;
 
 @Service
@@ -32,26 +25,18 @@ public class StudenteService {
     @Autowired
     private AulaRepository aulaRepository;
 
-    @Autowired
-    private Cloudinary cloudinary;
-
-    @Autowired
-    private JavaMailSenderImpl javaMailSender;
-
     public String saveStudente(StudenteDto studenteDto) {
 
         Studente studente = new Studente();
         studente.setNome(studenteDto.getNome());
         studente.setCognome(studenteDto.getCognome());
         studente.setDataNascita(studenteDto.getDataNascita());
-        studente.setEmail(studenteDto.getEmail());
 
         Optional<Aula> aulaOptional = aulaRepository.findById(studenteDto.getAulaId());
         if (aulaOptional.isPresent()) {
             Aula aula = aulaOptional.get();
             studente.setAula(aula);
             studenteRepository.save(studente);
-            sendMail(studente.getEmail()); //per inviare una email allo studente, in fase di creazione dello Studente
             return "Studente con matricola " + studente.getMatricola() + " salvato correttamente!";
         } else {
             throw new AulaNonTrovataException("Aula con id= " + studenteDto.getAulaId() + " non trovata!");
@@ -77,7 +62,6 @@ public class StudenteService {
             studente.setNome(studenteDto.getNome());
             studente.setCognome(studenteDto.getCognome());
             studente.setDataNascita(studenteDto.getDataNascita());
-            studente.setEmail(studenteDto.getEmail());
             Optional<Aula> aulaOptional = aulaRepository.findById(studenteDto.getAulaId());
             if (aulaOptional.isPresent()) {
                 Aula aula = aulaOptional.get();
@@ -101,30 +85,6 @@ public class StudenteService {
         } else {
             throw new StudenteNonTrovatoException("Studente con matricola= " + matricola + " non trovato!");
         }
-    }
 
-    public String inserisciFotoStudente(int matricola, MultipartFile foto) throws IOException {
-        Optional<Studente> studenteOptional = getStudenteById(matricola);
-
-        if (studenteOptional.isPresent()) {
-            String url = (String) cloudinary.uploader().upload(foto.getBytes(), Collections.emptyMap()).get("url");
-            Studente studente = studenteOptional.get();
-            studente.setFoto(url);
-
-            studenteRepository.save(studente);
-
-            return "Studente con matricola " + matricola + " aggiornato correttamente con la foto inviata!";
-        } else {
-            throw new StudenteNonTrovatoException("Studente con matricola= " + matricola + " non trovato!");
-        }
-    }
-
-    private void sendMail(String email) {
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo(email);
-        message.setSubject("Registrazione Servizio rest");
-        message.setText("Registrazione al servizio rest avvenuta con successo");
-
-        javaMailSender.send(message);
     }
 }
