@@ -6,6 +6,7 @@ import it.epicode.Lezione.exception.BadRequestException;
 import it.epicode.Lezione.exception.UserNotFoundException;
 import it.epicode.Lezione.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -20,11 +21,13 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/api/users")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 
     @GetMapping("/api/users/{id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public User getUserById(@PathVariable int id) {
         Optional<User> userOptional = userService.getUserById(id);
 
@@ -36,6 +39,7 @@ public class UserController {
     }
 
     @PutMapping("/api/users/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public User updateUser(@PathVariable int id, @RequestBody @Validated UserDto userDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new BadRequestException(bindingResult.getAllErrors().stream()
@@ -45,6 +49,7 @@ public class UserController {
     }
 
     @DeleteMapping("/api/users/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public String deleteUser(@PathVariable int id) {
         return userService.deleteUser(id);
     }
